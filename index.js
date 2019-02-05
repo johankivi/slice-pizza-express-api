@@ -8,7 +8,8 @@ const orders = require('./routes/orders');
 let app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors()); // Dev
+
 
 app.route('/menu')
 .get(menu.get)
@@ -19,6 +20,8 @@ app.route('/orders')
 .patch(orders.patch)
 
 
-app.listen(3001, () => {
-    console.log('Up n running. Hit me with the pizzas.');
+const PORT = 3000;
+
+app.listen(PORT, () => {
+    console.log(`Up n running on port ${PORT}. Hit me with the pizza orders!`);
 })
