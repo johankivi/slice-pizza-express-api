@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const firebase = require('./services/firebase');
 
 // Routes
 const menu = require('./routes/menu');
